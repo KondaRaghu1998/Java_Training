@@ -1,0 +1,43 @@
+# DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+#spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+#spring.datasource.username=postgres
+#spring.datasource.password=Raghu@1998
+#spring.datasource.driver-class-name=org.postgresql.Driver
+#server.port=8091
+## Hibernate
+#
+## The SQL dialect makes Hibernate generate better SQL for the chosen database
+#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+#
+## Hibernate ddl auto (create, create-drop, validate, update)
+#spring.jpa.hibernate.ddl-auto =update
+#
+#spring.jpa.show-sql=true
+#spring.jpa.properties.hibernate.format_sql=true
+
+server:
+   port: 8090
+
+spring:
+   datasource:
+          url: jdbc:postgresql://localhost:5432/postgres
+          username: postgres
+          password: Raghu@1998
+          driver-class-name: org.postgresql.Driver
+
+   jpa:
+      properties:
+            hibernate:
+              dialect: org.hibernate.dialect.PostgreSQLDialect
+              format_sql: true
+
+
+      hibernate:
+           ddl-auto: update
+      show-sql : true
+   jackson:
+      time-zone: IST      #Jackson by default converts all date to UTC when object send to frontend. My Database and System timezone is IST so I have set IST to jackson timezone
+
+
+
+
